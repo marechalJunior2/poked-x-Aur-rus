@@ -1,7 +1,7 @@
 # Pokedex
 
 ## Objetivos
-
+crie um site inspirado na pokedéx. todos os dados vão ser scrapeados da base https://pokemondb.net/pokedex/all 
 
 ### Stack Tecnlógico
 - Backend: PHP estruturado com sessões nativas
@@ -9,12 +9,10 @@
 - Frontend: HTML5, PHP, CSS, Tailwind CSS
 
 #### Regras de negócio (CORE)
-Tratar senhas de usuários com hash bcript
-O sistema deve ter uma página de históricos e manter sempre os logs de qualquer alteração feita por 
-qualquer usuário, para auditorias futuras.
-
-
-
+- apontar a câmera para o pokémon desejado, escanear o mesmo e visualiza-lo no painel.
+- faça a busca de todos os pokémons neste site https://pokemondb.net/pokedex/all
+- as buscas sem barras de busca ou por imagem devem ser dinâmicas. ex: ao digitar deve aparecer a sugestão do Pokémon.
+- deve ter um Pokémon escondido super raro, o fantasma do comunismo, 0,0000001% de achar. e quem achar vai ser liberto do capitalismo ao hino da união sovietica.
 ##### Regras Globais
 - Use sempre PDO para conexão e queries no MySQL para evitar SQL Injections
 - Mantenha o código limpo e comente apenas logicas complexas.
