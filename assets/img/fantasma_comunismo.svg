@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de Fundo Místico Vermelho -->
+    <radialGradient id="ghostGlow" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#ff1a1a" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#cc0000" stop-opacity="0.8"/>
+      <stop offset="75%" stop-color="#800000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2b0000" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Gradiente Ouro Soviético -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff59d"/>
+      <stop offset="40%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ff9800"/>
+    </linearGradient>
+
+    <!-- Filtro de Brilho Etéreo -->
+    <filter id="spectralGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Aura do Espectro -->
+  <circle cx="250" cy="240" r="190" fill="url(#ghostGlow)" />
+
+  <!-- Chamas do Proletariado (Ectoplasma Superior) -->
+  <path d="M 250 40 
+           C 220 80, 190 120, 200 170 
+           C 180 140, 150 160, 140 200 
+           C 120 180, 100 220, 110 260
+           C 120 310, 150 350, 180 390
+           C 200 420, 220 440, 250 460
+           C 280 440, 300 420, 320 390
+           C 350 350, 380 310, 390 260
+           C 400 220, 380 180, 360 200
+           C 350 160, 320 140, 300 170
+           C 310 120, 280 80, 250 40 Z" 
+        fill="#b30000" opacity="0.85" filter="url(#spectralGlow)"/>
+
+  <!-- Corpo Fantasmagórico Interno -->
+  <path d="M 250 70 
+           C 225 110, 180 150, 180 220 
+           C 180 280, 210 330, 230 380
+           C 240 400, 250 410, 250 410
+           C 250 410, 260 400, 270 380
+           C 290 330, 320 280, 320 220
+           C 320 150, 275 110, 250 70 Z" 
+        fill="#e60000" opacity="0.9" filter="url(#spectralGlow)"/>
+
+  <!-- Olhos do Espectro Revolucionário -->
+  <polygon points="190,210 230,225 210,235" fill="#fff" filter="url(#spectralGlow)"/>
+  <circle cx="212" cy="223" r="5" fill="#ffd700" />
+  
+  <polygon points="310,210 270,225 290,235" fill="#fff" filter="url(#spectralGlow)"/>
+  <circle cx="288" cy="223" r="5" fill="#ffd700" />
+
+  <!-- Sorriso Espectral de Desafio ao Capital -->
+  <path d="M 215 260 Q 250 285 285 260 Q 250 300 215 260 Z" fill="#ffd700" opacity="0.9" />
+
+  <!-- Emblema Central: Foice e Martelo de Pura Energia Mágica -->
+  <g transform="translate(195, 305) scale(0.65)" filter="url(#spectralGlow)">
+    <!-- Foice -->
+    <path d="M 90 20 
+             C 40 20, 10 60, 10 110 
+             C 10 155, 35 185, 70 200 
+             C 65 185, 60 160, 65 140 
+             C 70 120, 85 95, 110 80 
+             C 125 70, 140 65, 160 65 
+             C 150 50, 120 20, 90 20 Z" 
+          fill="url(#goldGradient)" />
+    <!-- Cabo da Foice -->
+    <polygon points="60,190 75,180 115,245 100,255" fill="url(#goldGradient)" />
+
+    <!-- Martelo -->
+    <polygon points="120,70 155,45 175,70 140,95" fill="url(#goldGradient)" />
+    <!-- Cabo do Martelo -->
+    <polygon points="140,80 150,70 25,240 15,230" fill="url(#goldGradient)" />
+  </g>
+
+  <!-- Estrela Vermelha no Topo -->
+  <polygon points="250,95 258,118 282,118 263,132 270,155 250,140 230,155 237,132 218,118 242,118" 
+           fill="url(#goldGradient)" filter="url(#spectralGlow)"/>
+</svg>

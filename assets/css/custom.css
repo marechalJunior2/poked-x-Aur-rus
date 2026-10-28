@@ -1,0 +1,122 @@
+/* Pokédex Retro-Futurista Custom Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --pokedex-red: #dc2626;
+  --pokedex-red-dark: #991b1b;
+  --pokedex-lens-blue: #0284c7;
+  --pokedex-screen-bg: #1e293b;
+  --pokedex-screen-green: #10b981;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 50% 20%, #1e1e2f 0%, #0d0d15 100%);
+  min-height: 100vh;
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-hud {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Efeito de Lente Principal da Pokédex */
+.big-blue-lens {
+  background: radial-gradient(circle at 35% 35%, #7dd3fc 0%, #0284c7 45%, #0369a1 80%, #082f49 100%);
+  box-shadow: 
+    0 0 15px rgba(56, 189, 248, 0.7),
+    inset 0 0 10px rgba(255, 255, 255, 0.8),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+  border: 4px solid #f8fafc;
+}
+
+/* LEDs indicadores */
+.led-indicator {
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Scanlines Retrô no Visor */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+}
+
+/* Linha de Scanner Animada */
+@keyframes scanAnimation {
+  0% { top: 0%; opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { top: 96%; opacity: 0.8; }
+}
+
+.scan-laser-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #22c55e, #86efac, #22c55e, transparent);
+  box-shadow: 0 0 12px #22c55e;
+  animation: scanAnimation 2s ease-in-out infinite alternate;
+}
+
+/* Efeito de Alerta Soviético */
+@keyframes sovietPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6), inset 0 0 20px rgba(239, 68, 68, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(239, 68, 68, 0.95), inset 0 0 35px rgba(245, 158, 11, 0.8);
+  }
+}
+
+.soviet-glow {
+  animation: sovietPulse 1.5s infinite;
+}
+
+/* Tipos de Pokémon Badges */
+.type-normal   { background-color: #A8A878; color: #fff; }
+.type-fire     { background-color: #F08030; color: #fff; }
+.type-water    { background-color: #6890F0; color: #fff; }
+.type-grass    { background-color: #78C850; color: #fff; }
+.type-electric { background-color: #F8D030; color: #1e293b; }
+.type-ice      { background-color: #98D8D8; color: #1e293b; }
+.type-fighting { background-color: #C03028; color: #fff; }
+.type-poison   { background-color: #A040A0; color: #fff; }
+.type-ground   { background-color: #E0C068; color: #1e293b; }
+.type-flying   { background-color: #A890F0; color: #fff; }
+.type-psychic  { background-color: #F85888; color: #fff; }
+.type-bug      { background-color: #A8B820; color: #fff; }
+.type-rock     { background-color: #B8A038; color: #fff; }
+.type-ghost    { background-color: #705898; color: #fff; }
+.type-dragon   { background-color: #7038F8; color: #fff; }
+.type-dark     { background-color: #705848; color: #fff; }
+.type-steel    { background-color: #B8B8D0; color: #1e293b; }
+.type-fairy    { background-color: #EE99AC; color: #1e293b; }
+.type-revolutionary { background: linear-gradient(135deg, #b91c1c, #d97706); color: #fef08a; font-weight: bold; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
